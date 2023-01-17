@@ -2,3 +2,8 @@ GET http://localhost:3000/rackets
 
 ###
 POST http://localhost:3000/rackets
+Content-Type: application/json
+
+{
+	"description": "testing"
+}

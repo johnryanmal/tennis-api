@@ -4,6 +4,11 @@ class RacketsController < ApplicationController
 	end
 
 	def create
-		render json: { msg: "hello" }
+		render json: { racket: Racket.create(racket_params) }
 	end
+
+	private
+		def racket_params
+			params.permit(:description)
+		end
 end
