@@ -7,3 +7,11 @@ Content-Type: application/json
 {
 	"description": "testing"
 }
+
+###
+PATCH http://localhost:3000/rackets/39
+Content-Type: application/json
+
+{
+	"description": "updating"
+}
