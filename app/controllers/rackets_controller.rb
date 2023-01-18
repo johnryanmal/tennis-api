@@ -3,6 +3,15 @@ class RacketsController < ApplicationController
 		render json: { rackets: Racket.all }
 	end
 
+	def show
+		racket = Racket.find_by(racket_id)
+		if racket
+			render json: { racket: racket }
+		else
+			render nothing: true, status: :internal_server_error
+		end
+	end
+
 	def create
 		render json: { racket: Racket.create(racket_params) }
 	end
